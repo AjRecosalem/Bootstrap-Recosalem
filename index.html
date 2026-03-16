@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SABOR | Modern Filipino Dining</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand fs-3 fw-bold" href="#">SABOR.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link px-3" href="#menu">Our Menu</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#contact">Location</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-custom ms-lg-3 text-white" href="#">Book a Table</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-1 mb-3">Flavors that Speak.</h1>
+            <p class="lead mb-5">Minimalist dining with a focus on fresh, local ingredients.</p>
+            <a href="#menu" class="btn btn-custom text-white">Explore Menu</a>
+        </div>
+    </header>
+
+    <section id="menu" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-4">Chef's Selection</h2>
+                <div class="accent-line mx-auto"></div>
+            </div>
+            
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="menu-item">
+                        <span class="price">₱450</span>
+                        <h4>Grilled Sea Bass</h4>
+                        <p class="text-muted small">Lemon-infused, served with wild-harvested greens.</p>
+                    </div>
+                    <div class="menu-item">
+                        <span class="price">₱380</span>
+                        <h4>Truffle Mushroom Risotto</h4>
+                        <p class="text-muted small">Local mushrooms, aged parmesan, and micro-herbs.</p>
+                    </div>
+                    <div class="menu-item">
+                        <span class="price">₱320</span>
+                        <h4>Heirloom Tomato Salad</h4>
+                        <p class="text-muted small">Balsamic glaze, fresh basil, and local buffalo mozzarella.</p>
+                    </div>
+                    <div class="menu-item">
+                        <span class="price">₱420</span>
+                        <h4>Roasted Duck Breast</h4>
+                        <p class="text-muted small">Honey-glaze, spiced carrots, and pomegranate reduction.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=800" class="img-fluid food-img main-menu-img" alt="Signature Dish">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-4">From Our Kitchen</h2>
+                <div class="accent-line mx-auto"></div>
+            </div>
+            <div class="row g-3">
+                <div class="col-6 col-md-4">
+                    <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800" 
+                         class="img-fluid food-img clickable-img" alt="Dessert" 
+                         data-bs-toggle="modal" data-bs-target="#imageModal" onclick="updateModal(this.src)">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&q=80&w=800" 
+                         class="img-fluid food-img clickable-img" alt="Salad" 
+                         data-bs-toggle="modal" data-bs-target="#imageModal" onclick="updateModal(this.src)">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=800" 
+                         class="img-fluid food-img clickable-img" alt="Pizza" 
+                         data-bs-toggle="modal" data-bs-target="#imageModal" onclick="updateModal(this.src)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-dark text-white py-5">
+        <div class="container text-center">
+            <h3 class="mb-4 display-6">SABOR.</h3>
+            <p class="text-muted">Mandurriao, Iloilo City, Western Visayas</p>
+            <p class="small text-muted mb-0 mt-5 opacity-50">© 2026 Sabor Dining Group. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body p-0 text-center">
+                    <img src="" id="modalImage" class="img-fluid rounded-3 shadow-lg" alt="Full view">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function updateModal(imageSrc) {
+            document.getElementById('modalImage').src = imageSrc;
+        }
+    </script>
+</body>
+</html>

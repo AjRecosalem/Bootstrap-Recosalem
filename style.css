@@ -1,0 +1,116 @@
+/* --- Variables --- */
+:root {
+    --primary-gold: #c9a227;
+    --dark-bg: #121212;
+    --text-muted: #6c757d;
+    --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* --- Global --- */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #333;
+    background-color: #fff;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, .navbar-brand {
+    font-family: 'Playfair Display', serif;
+}
+
+.accent-line {
+    background-color: var(--primary-gold);
+    height: 2px;
+    width: 60px;
+    margin-top: 15px;
+}
+
+/* --- Navigation --- */
+.navbar {
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--dark-bg) !important;
+}
+
+/* --- Hero --- */
+.hero-section {
+    height: 85vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=1600');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* --- Menu & Gallery --- */
+.menu-item {
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    transition: var(--transition-smooth);
+}
+
+.menu-item:hover {
+    border-bottom-color: var(--primary-gold);
+}
+
+.price {
+    color: var(--primary-gold);
+    font-weight: 700;
+    float: right;
+}
+
+.food-img {
+    border-radius: 15px;
+    transition: var(--transition-smooth);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.main-menu-img:hover {
+    transform: translateY(-5px);
+}
+
+.clickable-img {
+    cursor: zoom-in;
+    height: 280px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.clickable-img:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+/* --- Buttons --- */
+.btn-custom {
+    background-color: var(--primary-gold);
+    border: none;
+    border-radius: 0;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: var(--transition-smooth);
+}
+
+.btn-custom:hover {
+    background-color: #000;
+    transform: translateY(-3px);
+}
+
+/* --- Modal Fixes --- */
+#imageModal .modal-content {
+    background: transparent;
+}
+
+#modalImage {
+    max-height: 85vh;
+}
